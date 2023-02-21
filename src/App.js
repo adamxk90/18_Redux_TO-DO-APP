@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Toaster } from 'react-hot-toast'
+import './App.css'
+import AppContent from './components/AppContent'
+import AppHeader from './components/AppHeader'
+import PageTitle from './components/PageTitle'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className="App w-auto text-center block items-center">
+        <PageTitle>
+          <h1 className="font-bold underline text-5xl pb-10">TO DO APP</h1>
+        </PageTitle>
+        <AppHeader />
+        <AppContent />
+      </div>
+      <div className="">
+        <Toaster  />
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App
