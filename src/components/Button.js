@@ -1,4 +1,6 @@
 function Button({ children, type }) {
+
+  
   return (
     <button
       className={`text-white font-bold py-2 px-4 rounded ${
@@ -13,9 +15,9 @@ function Button({ children, type }) {
   )
 }
 
-function SelectButton({ children, ...rest }) {
+function SelectButton({ children,updateFilter }) {
   return (
-    <select
+    <select onChange={updateFilter}
       role="button"
       className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
     >
